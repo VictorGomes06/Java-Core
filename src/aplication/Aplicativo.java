@@ -7,7 +7,8 @@ import entities.Triangulo;
 public class Aplicativo {
 
 	public static void main(String[] args) {
-		Scanner leitor = new Scanner(System.in);
+		Scanner leitor = new Scanner(System.in); 
+		
 		Triangulo x = new Triangulo();
 		Triangulo y = new Triangulo();
 		
