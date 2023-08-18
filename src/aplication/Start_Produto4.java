@@ -23,19 +23,19 @@ public class Start_Produto4 {
         
        
         
-        System.out.println("informações do produto : " + "nome :" + produto.getNome() + " valor R$ " + produto.getPreco() );
+        System.out.println("Informações do produto : " + "nome :" + produto.getNome() + " valor R$ " + produto.getPreco() );
         
         System.out.println("Quantidade :");
         int quantidade = leitor.nextInt();
         produto.addProduto(quantidade);
         
-        System.out.println("valor total em estoque : R$ " + produto .valorTotalEmEstoque());
+        System.out.println("Valor total em estoque : R$ " + produto .valorTotalEmEstoque());
         
         System.out.println("Informe a quantidade que para remover : ");
         quantidade = leitor.nextInt();
         produto.removerProduto(quantidade);
         
-        System.out.println("valor total em estoque : R$ " + produto .valorTotalEmEstoque());
+        System.out.println("Valor total em estoque : R$ " + produto .valorTotalEmEstoque());
         
 	}
 
