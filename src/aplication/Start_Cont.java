@@ -31,6 +31,18 @@ public class Start_Cont {
 		}
 		// Mostrar os dados da conta
 		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
+
+		// Solicitar um depósito.
+		double deposito = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o valor do depósito ",
+				"Depósito em conta", JOptionPane.PLAIN_MESSAGE));
+		conta.Deposito(deposito);
+		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
+
+		double saque = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o valor para saque ",
+				"Saque em conta", JOptionPane.PLAIN_MESSAGE));
+		conta.Saque(saque);
+		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
+
 	}
 
 }

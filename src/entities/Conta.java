@@ -14,7 +14,6 @@ public class Conta {
 	}
 
 	public Conta(int numeorConta, String donoConta, double saldoConta) {
-		super();
 		this.numeroConta = numeorConta;
 		this.donoConta = donoConta;
 		this.saldoConta = saldoConta;
