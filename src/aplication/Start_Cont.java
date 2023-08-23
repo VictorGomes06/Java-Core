@@ -13,12 +13,12 @@ public class Start_Cont {
 
 		Conta conta;
 
-		int numeroConta = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o número da conta Y/y ou n",
+		int numeroConta = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o número da conta ",
 				"Abertura da conta", JOptionPane.PLAIN_MESSAGE));
-		String donoConta = JOptionPane.showInputDialog(null, "Informe o nome do dono da conta",
-				"Abertura da conta", JOptionPane.PLAIN_MESSAGE);
-		String seraQueVaiterDeposito = JOptionPane.showInputDialog(null, "Terá depósito inicial ?", "Abertura da conta",
+		String donoConta = JOptionPane.showInputDialog(null, "Informe o nome do dono da conta", "Abertura da conta",
 				JOptionPane.PLAIN_MESSAGE);
+		String seraQueVaiterDeposito = JOptionPane.showInputDialog(null, "Terá depósito inicial ? Y/y ou n",
+				"Abertura da conta", JOptionPane.PLAIN_MESSAGE);
 		seraQueVaiterDeposito = seraQueVaiterDeposito.toUpperCase();
 		char temDepositoSimNao = seraQueVaiterDeposito.charAt(0);
 		if (temDepositoSimNao == 'Y') {
@@ -29,6 +29,8 @@ public class Start_Cont {
 		} else {
 			conta = new Conta(numeroConta, donoConta);
 		}
+		// Mostrar os dados da conta
+		JOptionPane.showMessageDialog(null, conta, "Dados da conta", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }
