@@ -35,29 +35,23 @@ public class Alistamento {
 		return idade;
 	}
 
-	public double multa(double multa) {
+	public double multa() {
 		idade = idade();
 		if (idade >= 20) {
 			for (int i = 0; i < idade; i++) {
-				multa += 5.00;
+				multa = 5.00 * (idade - 20);
 			}
 		}
 		return multa;
 	}
 
 	public String dataTrue() {
-		String dataTrue;
-		String dataFlase;
-		String tString;
-		dataTrue = "Informe seu nome :";
-		dataFlase = "não pode fazer o alistamento ";
-
 		if (idade() > 45 || idade() < 18) {
-			tString = dataFlase;
+			
 		} else {
-			tString = dataTrue;
+			
 		}
-		return tString;
+		
 
 	}
 
@@ -73,13 +67,7 @@ public class Alistamento {
 		
 		return dados;
 	}
-	public String exibicao() {
-		
-		for (int i = 0; i < 7 ; i++) {
-			System.out.println(Array[i]);
-		}
 	
-	}
 	@Override
 	public String toString() {
 		return dataTrue();
@@ -100,8 +88,6 @@ public class Alistamento {
 	public void setAnoNascimento(int anoNascimento) {
 		this.anoNascimento = anoNascimento;
 	}
-	public int getIdade() {
-		return toString(idade) ;
-	}
+	
 
 }
