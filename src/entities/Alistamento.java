@@ -51,6 +51,7 @@ public class Alistamento {
 		} else {
 			
 		}
+		return email;
 		
 
 	}
@@ -59,7 +60,7 @@ public class Alistamento {
 		
 		String dados[] = new String[7];
 		nome = dados[0];
-		dados[1] = getIdade(); 
+		dados[1] = getNome(); 
 		nomeDaMae = dados[2];
 		nomeDoPai = dados[3];
 		

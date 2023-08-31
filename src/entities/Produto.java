@@ -4,7 +4,7 @@ public class Produto {
 
 	private String nome;
 	private double preco;
-	private int quantidade;
+	public int quantidade;
 
 	public Produto() {
 
@@ -23,8 +23,8 @@ public class Produto {
 	public double getPreco() {
 		return preco;
 	}
-	public void setPreco(double preco) {
-		this.preco = preco;
+	public void setPreco(String preco2) {
+		this.preco = preco2;
 	}
 	
 	public double valorTotalEmEstoque() {
