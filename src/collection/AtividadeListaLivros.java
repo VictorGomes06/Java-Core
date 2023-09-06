@@ -12,43 +12,34 @@ public class AtividadeListaLivros {
 		AtividadeListaLivros Livros = new AtividadeListaLivros();
 
 		System.out.println("Informe o Id do livro : ");
-		String idLivo = leitor.next();
-		Livros.addLivro(idLivo);
-		
+		String idLivo = leitor.nextLine();
+
 		System.out.println("Titulo :");
-		String titulo = leitor.next();
-		Livros.addLivro(titulo);
-		
+		String titulo = leitor.nextLine();
+
 		System.out.println("Autor : ");
-		String autor = leitor.next();
-		Livros.addLivro(autor);
-		
+		String autor = leitor.nextLine();
+
 		System.out.println("Ano : ");
-		String ano = leitor.next();
-		Livros.addLivro(ano);
-		
+		String ano = leitor.nextLine();
+
 		System.out.println("Gênero : ");
-		String genero = leitor.next();
-		Livros.addLivro(genero);
-		
+		String genero = leitor.nextLine();
+
 		System.out.println("Editora : ");
-		String editora = leitor.next();
-		Livros.addLivro(editora);
-		
+		String editora = leitor.nextLine();
+
 		System.out.println("Páginas : ");
-		String paginas = leitor.next();
-		Livros.addLivro(paginas);
-		
-		System.out.println("Quantidade de livros : " + Livros.Mostrarlivros(0));
-		System.out.println("----------------");
-		Livros.MostrarElementos();
-		
+		String paginas = leitor.nextLine();
+
 		leitor.close();
-		
+
 	}
 
-	public void addLivro(String idlivro) {
-		Livros.add(idlivro);
+	public void adicionarLivro(String idLivro, String titulo, String nomeAutor, String ano, String genero,
+			String editora, String paginas) {
+		this.Livros.add(idLivro + "-" + titulo + " - " + nomeAutor + " - " + ano + " - " + genero + " - " + editora
+				+ " - " + paginas);
 	}
 
 	public int Mostrarlivros(int quantLivros) {
@@ -56,18 +47,14 @@ public class AtividadeListaLivros {
 		return quantLivros;
 	}
 
-	public void MostrarElementos() {
-		System.out.println("Livro : " + Livros.get(0));
-		System.out.println("Título : " + Livros.get(1));
-		System.out.println("Autor: " + Livros.get(2));
-		System.out.println("Ano : " + Livros.get(3));
-		System.out.println("Gênero : " + Livros.get(4));
-		System.out.println("Editora : " + Livros.get(5));
-		System.out.println("Páginas : " + Livros.get(6));
+	public void exibirQuantidadeElementos() {
+		System.out.println("A lista contém " + this.Livros.size() + " elementos");
 	}
 
-	public void RemoverLivro() {
-		Livros.removeAll(Livros);
-	}
+	public int removerLivro(String titulo) {
 
+		int index = this.Livros.indexOf(titulo);
+		return Livros.indexOf(titulo);
+
+	}
 }
